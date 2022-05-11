@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Norse';
+  src: url(Norse-Bold.otf), format('opentype');
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  font-family: 'Norse';
+}
+
+.hero {
+  position: relative;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction:column;
+  flex: 4;
+  justify-content: center;
+  align-items: center;
+  background: url(./greenleaf.jpg);
+  background-size:  cover;
+  color: white;
+}
+
+.main-content {
+  flex: 6;
+}
+
+.hero > img {
+  max-height: 100vh;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+.hero-head {
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  top: 15%;
+  position: absolute;
+}
+
+.hero-head .logo {
+  height: 6rem;
+  min-width: auto;
+  object-fit: contain;
+}
+
+.hero p {
+  position: absolute;
+  bottom: 0px;
+}
+
+.form-section {
+  box-shadow: 10px 5px 5px gray;
+  padding: 20px 36px;
+  background-color: lavender;
+}
+
+.description {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 60px 30px 20px;
+  margin-top: 5rem;
+}
+.form-section > p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 30px;
+}
+form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+line-height: 1.5rem;
+padding: 5px;
+border: 2px solid #ccc;
+width: 200px;
+border-radius: 5px;
+}
+
+
+input:focus:valid {
+  border: green;
+}
+
+.submit-section {
+  padding: 24px 36px;
+}
+
+button {
+  padding: 20px 30px;
+  background-color: #596D48;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.submit-section p {
+  font-size: 1.2rem;
+}
+
+
+@media screen and (max-width: 900px) {
+body {
+  flex-direction: column;
+  height: auto;
+}
+.hero-head{
+  position: relative;
+}
+.hero p {
+  position: relative;
+}
+}
